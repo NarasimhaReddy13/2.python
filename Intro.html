@@ -1,0 +1,697 @@
+Instructions (set-- software) that we write to create software is called code
+
+Why Python ? -- Powerful progrmming language and minimal code
+
+AI, ML, IoT, Cyber Security , Big Data -- Applications of Python
+
++ - * / 
+
+Variables -- for storing values
+
+Data Types --- String ( a-z, digits, special char, space), Integer (- to +), Float( decimals ), Boolean( T or F, On or Off )
+
+= -- Assignment Operator
+
+Program is a sequence of Instructions
+
+BODMAS -- O -- Orders
+
+10/2 -- 5.0
+
+username = input()
+
+String Concatination possible only with strings ( 'a' + 'b')
+Not possible with ( '*' + 10 ) ---- Type Error
+
+String Repetition --- '*' * 10
+
+length -- len(username)
+
+Indexing --- username[4] --- ( string index out of range -- of num >= length )
+
+String Slicing -- username[strInx:endInx] -- both are optional
+
+type(10) -- <class 'ini'> ,, 4.2 , 'Hi'
+
+string numbers can be converted to intergers -- a = '5' , int(a)
+
+Invalid Integer Conversion -- 'Five' or '5.0' , int(a) -- invalid literal for int()
+
+int(), str(), float(), bool()
+
+------------------------------------------------------------------
+
+Relational Operators:
+
+>, <, ==, <=, >=, != --- gives True or False
+( no space b/w Operators)
+
+Compare Int and Float --- 13 === 13.0
+Compare Strings ----- "ABC" === "ABC"
+
+It is Case Sensitive ( "ABC" != "abc")
+
+Strings and Equality Operators -- True != "True" , 1.1 != "1.1"
+
+
+Logical Operators: ( True or False )
+
+and -- True and True, or --- True or False , not -- ( not False)
+
+------------------------------------
+
+Conditional Statements:
+Sequence of Instructions are called block of code 
+
+if ():
+else:
+   --- else is executed only if condition is True
+
+else can be used along with if condition only ( No code is allowed between if conditional block and else Statement )
+
+------------------------------------
+
+modulus Operator: % ( will give remainder ) -- 6%3 - gives 0
+** -- will give exponent ( power ) -- a ** b 
+
+------------------------------------------------------------------------
+
+Nested Conditions:
+conditional block inside the if/else conditional block 
+
+. We can also write nested condition in else Statements
+
+Use elif ( can be any no.of after if ) statement to have multiple conditional statements b/w if and else 
+
+Executes the elif block whose expression evaluates to True
+If multiple elif conditions are True -- Only first elif block which is True willbe executed
+
+else statement is not compulsory after if-elif
+
+( Not write elif statement after else statement )
+
+--------------------------------------------------------------
+
+Loops : To execute a block of code several times
+
+While -- executes as long as the conditon is True
+
+Initialization , while termination condition, code, updation of Initialization --- wrong cases will give Inifinite loop 
+
+--------------
+right angle triangle stars:
+*
+* *
+* * *
+
+num = int(input())
+counter = 1
+while counter <= num:
+   print("* " * counter)
+   counter = counter + 1
+
+--------------------------------------------------------------
+
+For Loops:
+iterates over each item of a sequence
+
+for each item in word: , for i in range(n) -- from 0 to n-1 ( or ( start, end - end not included))
+
+n = int(input())
+
+total = 0
+for i in range(n):
+   num = int(input())
+   total = total + num
+
+print(total)
+--------------------------------------------------------------
+
+palindrome -- if reverse and normal are equal 
+greatest among n numbers -- take first input and compare with remaining-- fi_input = int(input())
+
+"2"*4 ---- 2222
+
+factors ( if a%i == 0) and factors sum
+Perfect Number -- if sum of factors == given number ( except the given number )
+Armstrong Number -- sum of sq/cubes(length) of digits ( i ** length ) == number
+
+------------------------------------------------------------------
+
+String Methods:
+
+Extended Slicing -- username[start_index: end_index: step]
+a = "Narasimha"
+a[1:6:2] -- aai
+
+
+Built-in reusable utilities:
+isdigit(), strip(), .lower(), .upper(), startswith(), endswith(), replace()
+
+"456".isdigit() -- True
+" 456".strip() --- 456 -- removes leading and tailing spaces
+Or 'Ravi.'.strip(".") -- remove dots ( specific character )
+Or ".,.,.Ravi.,.,..".strip(",.") -- removes multiple characters -- Ravi
+
+str.replace(old, new)
+str.startswith(value)
+
+--------------------------------------------------------------
+Shuffle String: Will give word and indexes
+shuf_s = shuf_s + s[index] 
+
+Prime Number --- If a number divisible by 1 and itself (if n>0 -- no.of fac > 1 else 1)
+
+Sq Pattern : 1 2 3 4 5
+             1 2 3 4 5 -- 5 times ( input times )
+
+                  pat = ""
+             sol: for i in range(1,a+1):
+                     pat = pat + str(i) + " "
+                  
+                  for i in range(a):
+                     print(pat)
+
+Composite Number : Positive or Natural number which has more than 2 factors 
+------------------------------------------------------------------
+
+Nested Loops: 
+Inner loop will be executed one time for each iteraration of outer loop 
+for ----(or)  while ---- : 
+   for --- (or) while -- :
+
+
+Que) Prime Numbers Range 
+
+Que) print Like -- 
+      1
+      2 3
+      4 5 6
+      7 8 9 10 
+------ ------------------------------------
+
+Loop Control Statements: These alter the sequential execution of a Program
+
+if-elif-else , while - for, break - continue
+
+break -- is used to exit the loop when a condition is satisfied
+for --- if --- break
+while --- break
+for --- for --- break
+
+continue -- makes the program skip the remaining statements in the current iteration and begin the next iteration
+while --- continue
+for --- if --- continue
+
+
+pass --- syntactic place holder. When it is executed , nothing happens
+while -- pass
+for -- pass
+
+
+------------------------------------------------------------------
+
+Comparing Strings and Naming Variables:
+Computer internally stores characters as numbers 
+
+Every character has a Unicode -- To find Unicode value -- ord(character)
+print(ord("A")) --- 65
+
+To find character of given Unicode -- chr(unicode)
+print(chr(75)) ---- K
+
+Unicode ranges -- 
+48 - 57 ----- Digits (0 - 9)
+65 - 90 --- Uppercase (A - Z)
+97 - 122 ---- Lowercase (a - z)
+Rest ---- special charaters , other languages
+
+--------------
+In Python , Strings are compared considering Unicode 
+print("A" < "B") -- True
+
+--------------
+characters/keywords not used for Naming ---- space, comma, special characters (~!@#$%^.?,----), int, str, print 
+
+Variable name must begin with ---- Uppercase, Lowercase, underscore (_)
+
+help("keywords") --- reserved words
+
+Camel case --- totalBill
+Pascal case -- TotalBill 
+Snake case --- total_bill ( In python )
+
+
+--------------------------------------------------------------
+
+round( number , digits(optional) ) --- rounds the float value
+When digits not specified -- default is 0 ( zero )
+
+print(round(3.14, 1)) --- 3.1
+print(round(3.14)) ------ 3
+
+
+Float values are stores approximately -- 
+print(0.1+0.2) ----- 0.3000000000004 != 0.3
+
+So use ---- print(round(0.1+0.2), 1) --- 0.3
+
+comments -- #
+
+
+--------------------------------------------------------------
+
+Floor Division Operator :
+To find the integral part of quotient use // ( Floor Division)
+
+print(3//2) --- 1
+
+Compound Assignment Operator: += , -= , *= , /= , %= --- a = a +1   ===> a += 1
+
+Escape characters:  
+string can be enclosed in single or double quotes 
+\n -- new line  ---- print('Hello\nWorld')
+\t -- tab space
+\\ -- Backslash
+\' -- Single Quote 
+\" -- Double Quote --- print("Hello\"Nara")
+
+print('It\'s Python') or print("It's Python") ---- Same
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+Data Structures : To store and organize data efficiently
+
+Built-in DS : List, Tuple, Set, Dictionary
+
+List : -- most versatile DS , Holds an ordered sequence of items
+[]-- items separated by comma(,)
+
+list_a = [5, "Six", a, 8.2]
+
+List of Lists:  [1, list_a]
+
+len(list_a)
+
+Accessing --- 
+list_a[1]
+Iterating -- for, while
+
+List Concatination:  + Operator , Repetition using *, for -- to add items to list 
+
+List Slicing --:-Extractina a part --- list_a[1:3] 
+Extended Slicing : --- Can extract alternate items using step as 3rd argument
+
+list_a[1:6:2]
+
+String -- converting to List 
+
+print(list("RED"))
+print(list(range(4))) --- [0,1,2,3]
+
+Lists are Mutable ------ Can be modified and items at any position can be updated
+
+
+------------------------------------------------------------------
+
+Working with Lists:
+In general , anything that can be assigned to a variable in Python -- is an Object 
+Strings, Integers, Floats, Lists etc .,. all are Objects
+
+
+Whenever an object is created in Python -- it will be given an unique identifier (Id) stored in Computer memory--
+id Can be different for every time we run 
+
+print(id("Hello"))
+
+
+
+Modifying Lists:
+
+   Case: When assigned an existing list , both will refer same object 
+         list_a = [1,2,3]
+         list_b = list_a 
+         *** both id's will be same -- and refers to same object 
+
+         list_b[2] = 4
+         print(list_b) === print(list_b) --- print(id(list_b)) === print(id(list_a))
+
+
+   Case: Assignment will update the reference to new object 
+         --- above upto list_b 
+         list_a = [6, 7]
+
+   Case: Assignment will update the reference to new object
+         list_a = [1,2] 
+         list_b = list_a
+         list_a = list_a + [6,7] 
+         print(list_a) --- [1,2,6,7] 
+         print(list_b) ---- [1, 2] 
+
+
+   Case: Compound Assignment will update the existing list -- instead of creating new object 
+         list_a += [6,7] 
+         prints -- both lists to [1,2,6,7] 
+
+   Case: Updating mutable objects will also effect the values in list, as the reference is changed
+         list_a = [1,2] 
+         list_b = [3, list_a] 
+         list_a[1] = 4
+         --- in both lists it will be updated 
+
+   Case: Updating immutable objects will not effect the values in the list, as the reference is changed
+         a = 2
+         list_a = [1,a]
+         print(list_a) --- [1,2] 
+
+         a = 3
+         print(list_a) ---- [1,2]
+
+
+
+--------------------------------------------------------------
+
+Lists and Strings :
+string.split(separator) -- Splits a string to list at every specified separator ( default whitespace) 
+
+multiple whitespaces in string is considered as a single when splitting -- when no separator
+
+\n, \t -- also considered as whitespace
+
+nums = "1\n2\t3   4"
+print(nums.split()) ---- ['1','2','3','4'] 
+
+Can use any separator -- "1,,2,3" --- .split(',') --- ['1','', '2', '3'] 
+
+"1  2 3".split(" ") --- ['1','', '2', '3'] 
+"Narasimha".split("a") -- ['N', 'r', 'simh','']
+
+"a".join(['N', 'r', 'simh','']) --- "Narasimha"
+
+Joining nn-string values -- gives error 
+
+
+
+--------------------------------------------------------------
+
+Negative Indexing : Returns the nth item from the end of list 
+
+list_a[-1] -- last element
+
+reversing the items in list/string --- use -1 as step size---- list[::-1] (or) string[::-1] 
+
+Slicing --- list_a[-3:-1] 
+Index can go -- out of bounds --- list_a[-10:-2] -- No error 
+
+
+
+Negative Step Size:
+It determines the decrement b/w each index for Slicing
+
+start_index > end_index  --- if not will print []
+list = [5,4,3,2,1]
+print(list[4:2:-1]) ---- 
+
+
+
+
+
+--------------------------------------------------------------
+
+Functions:
+Block of reusable code to perform a specific action -- Reusing code -- executed only when called  
+
+Function is uniquely identified by the function_name --must be called to execute
+
+*** Function should be defined before it is called.
+
+*** We can print directly in the Function itself -- or -- returning value from funtion and printing outside the Function
+
+**** Code written after the return statement will not be execcuted
+
+Built-in Functions are readily available for reuse -- print(), int(), str(), len()
+
+
+Functional Arguments :
+
+A Function can have more than one argument
+
+Keyword Arguments -- Passing values by their names. ( orderdoesn't matters here )
+   Errors : If the number of args passing and using in function are not matched
+            missing 1 required postional argument
+
+
+Positional Arguments : Passing without using argument names 
+   Assigned acc 2 their position in function call ( order matters here )
+
+
+--------------------------------------------------------------
+
+Built-in Functions:
+
+min(1,2,3,4) --- returns smallest item in sequence
+min(string1, string2) -- strings are compared character by character using Unicode values 
+
+max(1,2) -- 
+max([1,2,3,4])
+
+sum([1,2,3,4]) --- returns the sum of numbers
+
+sorted([4,5,2,3,0,1]) --- returns a new seq in increasing order 
+
+sorted(list_a, reverse = True) --- in Decreasing Order 
+
+------------------------------------------------------------------
+
+Function Call Stack and Recurssion:
+Stack is a Data Structure that stores items in Last-In / First-out manner
+
+Calling function_1() inside function_2()
+
+Function Call Stack -- Keeps track of function calls in progress
+
+***** A function calling itself is called a Recurssion *******
+Recurssion must have a base value -- otherwise gives error maximum Recurssion depth exceeded **
+
+------------------------------------------------------------------
+
+
+List Methods:
+
+append() -- add element to end of the list --- list_a.append(item)
+
+extend() -- adds elements of a sequence to end of the list --- list_a.extend(list_b)
+
+insert(index, value) -- Inserts element to list at specified index --- list_b.insert(1,4)
+
+pop() -- removes last element --- list_b.pop()
+
+remove(value) -- removes the first matching element from list -- list_a.remove(2)
+
+clear() --- removes all the elements --- list_a.clear()
+
+index(value) -- returns the index of first matched element -- list_a.index(2)
+
+count(value) -- returns count of occurance of a element -- list_a.count(2)
+
+sort() --- sortes the list --- list_a.sort() -- modifies the list
+
+sorted() -- sorted(list_a) -- Creates new sorted list 
+
+
+
+------------------------------------------------------------------
+
+Tuples and Sequences:
+
+None -- is an object which is a datatype of its own ( NoneType )
+var = None ---------- print(var) ---- print(type(var))
+
+Function without return statement or with no value in return ( return None )----- returns None
+
+-----
+Tuples : Holds ordered sequence of items --- Immutable 
+Created within round brackets ()-- each item separated by comma ,
+
+tuple_a = (1, "six")
+
+
+len(--), tuple(string) - gives tuple , list to tuple , sequence to tuple
+tuple(range(4)), membership check -- in, not in -- can also do for lists 
+
+
+Packing and Unpacking -- in tuples **************
+Values of any sequence can be directly assigned to Variables but number of variables in left must match the length of sequence (if not -- gives error)
+
+tuple_a = ('r', 'e', 'd')
+(a, b, c) = tuple_a
+print(a)
+
+
+
+() -- brackets are optional while creating tuples
+a = 1, 2, 3
+print(type(a)) --- print(a) ---- tuple 
+
+
+for 1 element ----- a = 1, -- print(type(a)) --- comma , is must after value
+If we comma , also after a -- type will give int
+
+
+
+
+------------------------------------------------------------------
+
+Sets : Unordered collection of items --- Every set element is Unique, and must immutable
+
+Created by enclosing elements within {} curly brackets -- elements separated by comma 
+
+Need not to be in same order as defined , and by default duplicate elements are eliminated
+
+set() --- will create a empty set
+
+set(list or string or tuple) -- prints set with unique values may be in different order
+
+As Sets are Unordered -- we can't access or change items of a set using -- Indexing, Slicing
+
+We can add item -------- set_a.add(7)
+To add multiple items -- set_a.update([1,2])  --- in Array form 
+
+set_a.discard(3) --- will remove the value if present
+set_a.remove(5) -- will remove if present , if not raise an error 
+
+
+Can also perform some operations like ---- clear(), len(), iteration, membership check
+
+------------------------------------------------------------------
+
+Set Operations:
+Set objects supports mathematical operations like Union, Intersection, Difference, Symmetric Difference
+
+Union ---- set containing all elements of both sets 
+           set_a | set_b
+           set_a.union(set_b)
+
+
+Intersection --- returns common elements of both the Sets
+                 set_a & set_b
+                 set_a.intersection(set_b)
+
+   
+   union, intersection --- also accepts list not only set
+
+Difference : ---- Set containing all the elements in first list but not in second list 
+                  set_a - set_b
+                  set_a.difference(set_b) -- converts sequence to set
+
+
+Symmetric Difference --:---- Set containing the elements which are not common to both Sets
+
+                             set_a ^ set_b
+                             set_a.symmetric_difference(set_b) ---- converts sequence to set
+
+
+                             ------=====================------------------------------------------------------------------
+
+
+                           Set Comparisons :
+
+                           set_b.issubset(set_a) --- returns True , if all elements of set_b are in set_a
+                           set_a.issuperset(set_b) --- True, if all elements in set_b are in set_a -- viceversa , order may change
+
+                           set_a.disjoin(set_b) --- True , if they have no common elements
+
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+Nested Lists and String Formatting:
+List as an item of another List
+
+nested_list = [5, "Six", [8,6], 8.2, True ]
+
+Accessing --: -- nested_list[2] 
+Accessing items of Nested list :-- nested_list[2][0] 
+
+*******************
+nes_list = ["Narasimha"] 
+print(nes_list[0][1]) ---- a 
+
+--------------------------------------------------------------
+
+String Formatting: Simplifies the Concatination, Increase readability, type Conversion is not required
+
+use {} -- where string needs to be formatted -- must be same count as arguments passing in msg.format(-,-,-)
+
+Numbering Placeholders -- {0}, {1} -- fill acc 2 position of arguments
+
+Naming Placeholders :-- {name}, {age}   ---- msg.format(name=name, age=age) -- filled acc 2 keyword values
+
+------------------------------------------------------------------
+
+
+Dictionaries: Unordered collection , Every item is a Key-Value pair 
+
+Created by using {} , and each item with Key-Value Pair -- separated by comma ,
+
+dict_a = {
+   "name": "Nara",
+   "age": 15
+}
+
+type -- will give dict 
+
+
+Keys --- name, age --- must be immutable and must be Unique
+Values -- Nara, 15 --- can be any datatype and can repeat
+
+
+dict() -- will create empty Dictionary
+print(dict()) ---- {}
+
+To access dictionary items -- use [] along with key -- to get value
+
+Using [] -- will raise Keyerror if key is not found --
+.get() --- will return None if key is not found
+
+
+------ Can do membership check
+
+
+Operations on Dictionaries:
+Adding / Modifying key-value pair
+dict_a['city'] = "Hyd" ---- This will be added to dict_a if there is no key similar to this -- otherwise it will be modified
+
+Dictionaries are mutable
+
+
+del dict_a['age'] --- will delete the key-value pair 
+
+Dictionary Views: dict.keys() ---  .values() --- .items()
+
+Can Iterate over keys or values or items and get individual keys or values or items
+
+list(dict_a.keys()) --- returns list of keys
+
+
+We can convert a list of key-value pairs to Dictionary
+[('name','Teja'), -----] -- raises valueError if not a key-value Pair
+
+
+
+
+Python provides dictionary methods Like: 
+copy(), get(), update(), fromkeys() --- 
+
+1.. When we directly assign a dictionary to another dictionary -- both refers same object with same Id 
+    So we can use copy() -- to create a copy as another dictionary
+
+   dict_a.copy()  -- can also used for list list.copy() 

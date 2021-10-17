@@ -1,0 +1,103 @@
+OOP --- Object Oriented Programming
+
+Software -- Easily changeable tool that performs specific task ( Softness )
+
+OOPSystem -- is a way of approaching, designing, developing software that is easy to change and resembles real-life objects
+
+Bad Way of describing -- information scattering, unrecognized
+Organized description -- Clear separation of objects, clear grouping of what object has and what it does
+
+
+
+When we are describing same objects only with different values for properties :? Use Template ( Standard Form )
+
+When modelling real-life objects -- we ensure to bundle related info together to clearly separate info of different objects
+
+Bundling related info (properties & actions together) -- is Encapsulation - Classes are used to bundle props and actions
+
+class keyword ---- is used to create a class --- class ClassName:  
+In Python, special method ---   def __init__   --- is used to assign values to properties
+
+In OOP -- 
+        properties are called attributes ***
+        actions are called methods ***
+
+
+To use the defined class -- we have to instantaite it
+As class is like Blueprint --- while its instance is based on that class with actual values
+
+
+Instance of class is similar to function call -- This instance is called Object ***
+
+Class Object is simply a collection of attributes and methods that act on thode data 
+
+Similar to Functions -- methods also support positional, keyword, default args and also return values 
+
+For instance method, we need to first write self in function definition and then other arguments **
+
+The class from which object is created is considered to be type of object --- type(obj1)
+
+Attributes can be set or accessed using . (dot) notation
+We can also access and update properties in other methods
+
+It is recommended to update attributes through methods.
+
+
+
+Attributes -:--- Broadly 2 types 
+    Instance Attributes : Attributes whose values can differ for each instance of class are modelled ( Items in cart )
+    Class Attributes: Attributes whose values stay common for all the objects are modelled ( Min bill, Flat Discount )
+
+
+Instance Attributes :-- Can only be accessed using instance of class
+
+
+Methods:
+Instance Methods -:-- can access all attributes of the instance and have self as a parameter
+                      Can be accessed through object ( instance of class )
+
+Class Methods* -:-- We send cls as a parameter indicating we are passing the class
+                   @classmethod   -- decorator marks the method below it as a class method
+
+Static Method* -:-- We might need some generic methods that don't need access to either instance or class attributes ( These are Static Methods )
+                   @staticmethod   -- decorator
+
+                   * ---- Can be accessed through class
+
+
+
+------------------------------------------------------------------------------------------
+
+ 
+Advantages of Modelling Classes :  Product , ElectronicItem + Product , GroceryItem + Product --:--
+    Reusability, Clear separation, More Organized
+
+
+Inheritance: Is a mechanism by which a class inherits attributes and methods from another class
+
+ElectronicItem inherits attributes & methods from Product -- instead of defining them again
+
+Product is Super/Base/Parent Class ---- ElectronicItem is Sub/Derived/Child Class
+Sub Class automatically inherits all the attributes & methods from its superclass
+Super Class cannot access the methods and attributes of the subclass
+
+
+We can call methods defined in superclass from the methods in the subclass
+
+
+Composition -:-- Modelling instances of one class as attributes of another class.
+
+Sometimes, we require a method in the instances of a subclass to behave differently from the method in instance of a super class
+
+super()  --- allows us to call methods of the superclass from subclass
+
+We can also inherit from subclass -- Can continue such Inheritance to any depth ---- MultiLevel Inheritance
+
+Inheritance ? when to use ---- When Classes have IS-A relationship.
+Composition ? when to use ---- When Classes have HAS-A relationship
+
+
+
+
+OOP Usage --- To build well-organized systems that are easy to use and extend ( to read easily , to fix bugs )
+

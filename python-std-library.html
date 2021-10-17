@@ -1,0 +1,191 @@
+Built-in functions like print(), max(), min() --- are readily available to reuse
+This collection of predefined utilities -- is Python Standard Library
+
+A file containing python code --- Module --- Like collections, random, datetime, math etc.,. 
+Modules further organized into folders -- Packages
+
+
+import module_name
+
+
+import math -------- provides some math functions
+
+Can do alias --- import math as m1
+
+
+We can also import just a specific definition from a Module
+
+from math import factoral    -------- can also alias this ---- from math import factoral as fact 
+
+
+Random Module: Useful whenever uncertainity is required ( Rolling a dice, flipping a coin -- )
+
+random module provides this uncertainity
+
+radint() -- is a function which returns the random integer in the given interval
+
+choice() -- returns a random element from the sequence
+
+
+https://docs.python.org/3/library/ --- for python std library
+
+
+-----------------------------------------------------------------
+
+map(), filter(), reduce() --- Simplify working with sequences like list, tuple
+
+
+map() --- applies a given function to each item of a sequence and returns the sequence of the result
+
+filter() -- filter the seq based on result of the given function ( function should return True/False )
+
+reduce() -- defined in functools module  ---- prints sum of sequence by considering 2 elements
+
+
+
+
+---------------------------------------------------------------------------------------------
+
+Scope & Namespaces : 
+Anything that can be assigned to a variable in Python -- is object ( Strings, integers, floats, lissts, fun, modules etc .,. )
+
+Namespaces: It is a collection of currently defined names along with info (like id) about object. 
+    It ensures that names are unique and won't lead to any conflict
+
+Namespaces allow us to have -- same name referring different things in different Namespaces
+
+
+Python created a namespace whenever required and forgets them when no longer required
+Built-in, Global, Local ------- different Namespaces
+
+
+Built-in Namespace -:-- Created when we started executing a Python prog and exists as long as prog is running
+id(), print() --- are always available to us at any part of the program
+
+
+Global Namespace -:-- Includes all names defined directly in a module ( outside of all functions )
+
+Local Namespace -:-- 
+    Modules can have various functions and classes
+    A new local namespace is created when a function is called, which lasts untill the function returns 
+
+
+
+
+Scope of a Name -:--- The region of a program in which that name has meaning
+Python searches for a name from inside out --- like local, global, Built-in namespaces 
+
+
+Variable defined outside of all functions -- Global Variable ( variable name will be a part of Global Namespace )
+
+Variable defined inside a function is --- Local Variable
+
+
+
+-----------------------------------------------------------------
+
+Errors and Exceptions:
+2 Major kinds of error ---- Syntax Errors , Exceptions
+
+Syntax Errors are parsing errors which occur when the code is not adhering to Python Syntax ... 
+
+When there is a Syntax error -- program will not execute even if that part of code is not used
+
+
+Exceptions -:--- Errors detected during execution
+Even when a statement or expression is syntactically correct , it may cause error when an attempt made to execute it
+
+
+( Ex: Internet is disconnected during the download or We don't have enough space left on device to download )
+
+When we runs code into an exception during execution --- The application/program crashes
+
+When we are developing end-user applications -- we must handle different possible exceptions 
+When we develop modules that used by other developers --  we need to raise exception for diff scenarios -- so that other developers can handle them
+
+Ex --:-- Money transfer app --- when the balance is zero , we need to raise exception
+
+
+
+---------- 
+
+Built-in Exceptions -:-- 
+    ZeroDivisionError, KeyError, EOFError, Exception, TypeError, OSError, ValueError, ArithmeticError ----- 
+
+
+We can use Built-in exception classes with raise keyword to raise an exception.
+
+** Python provides a way to catch the exceptions --- * try - except block can handle Exceptions
+
+Whenever an exception occur at some line in try block , the execution stops at that line and jumps to except block 
+
+try:
+
+except Exception:
+
+
+---
+
+We can access the handled exception in an object ** 
+We can handle multiple exceptions
+
+
+---------------------------------------------------------------------------------------------
+
+Dates & Times --:--- 
+Commonly used classes in the datetime module -- date, time, datetime, timedelta  --- 
+
+import datetime
+datetime.date(year, month, date)
+
+datetime.date.today()
+datetime.now()
+
+---
+from datetime import date --- 
+date(year, month, date)
+
+.year, .month, .day
+
+---
+from datetime import time --- 
+time(hour, minute, second)
+
+.hour, .minute, .second 
+
+----- 
+
+---------------------------------------------------------------------------------------------
+
+Formatting Datetime :--  format specifiers
+
+%y ---- Year without century --- 19, 20, 20
+%Y ---- Year with century ---- 2019, 2021
+
+%b -- Month as abbrevation ---- Jan, Feb
+%B --- Month as full name ---- January, February 
+
+%m --- month -------------- 01, 02 --- 12
+%d --- Day ---------- 01, 02, ---- 30
+%a --- Weekday abbrevation -- Sun. Mon 
+%A -- Full Weekday ---- Sunday, Monday 
+
+%H --- Hours in 24 hrs --- 00, 01----- 23
+%I -- Hour in 12 hrs ---- 01, 02 --- 12
+
+%p -- AM or PM
+
+%M --- Minutes ------------ 00, 01, ---- 59
+
+
+
+datetime.strftime(" ----- ") --- when printing as string from datetime object 
+datetime.strptime(string, "---") --- when creating datetime object from string 
+
+
+-----
+Timedelta -- represents duration
+
+
+minus (-) b/w two datetime -- will give difference
+
